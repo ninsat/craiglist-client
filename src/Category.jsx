@@ -11,7 +11,7 @@ class Category extends React.Component {
     this.state = {
       category: 'sss',
       listing: data, // to be removed
-      search: undefined,
+      search: '',
     };
     this.selectCat = this.selectCat.bind(this);
     this.handleClick = this.handleClick.bind(this);

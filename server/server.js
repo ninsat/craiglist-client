@@ -8,18 +8,17 @@ const port = 3000;
 app.use(express.static(`${__dirname}/../dist/`));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-
-});
+// app.get('/', (req, res) => {
+// });
 
 app.listen(port, () => console.log(`CraigsMarket listening on port ${port}!`));
 
 
 // craigslist.fetchBySearch('cta', result =>
 //   console.log('data', result));
-
+//
 // craigslist.fetchByCategory('toyota', result =>
 //   console.log('data', result));
-
-craigslist.fetchDetails('mca', result =>
-  console.log('data', result));
+//
+// craigslist.fetchDetails('mca', result =>
+//   console.log('data', result));
