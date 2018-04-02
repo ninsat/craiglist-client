@@ -14,11 +14,12 @@ app.use(bodyParser.json());
 app.listen(port, () => console.log(`CraigsMarket listening on port ${port}!`));
 
 
-// craigslist.fetchBySearch('cta', result =>
-//   console.log('data', result));
-//
+craigslist.fetchByCategory('cta', result =>
+  console.log('data', result));
+
+
 // craigslist.fetchByCategory('toyota', result =>
 //   console.log('data', result));
-//
+
 // craigslist.fetchDetails('mca', result =>
 //   console.log('data', result));

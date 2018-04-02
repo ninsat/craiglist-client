@@ -22,6 +22,13 @@ class Category extends React.Component {
 
   }
 
+  fetchData(cat) {
+    // const options = {
+    //
+    // }
+    // axios.get(`/category/${cat}`)
+  }
+
   selectCat(e) {
     this.setState({ category: e.target.id });
   }
