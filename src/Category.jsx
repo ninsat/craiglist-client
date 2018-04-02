@@ -24,6 +24,10 @@ class Category extends React.Component {
   render() {
     return (
       <div>
+        <div id="search">
+          <input placeholder='Search "couch"' value={this.state.quantity} onChange={this.handleChangeQuantity} />
+          <button onClick={this.handleClick}><img src="https://image.flaticon.com/icons/svg/34/34097.svg" alt="icon" /></button>
+        </div>
         <div id="category">
           <div>
             <p>Shop By Category</p>

@@ -1,12 +1,50 @@
 body {
   font-family: verdana;
   background-color: #e9ebee;
+   margin: auto;
+}
+
+header {
+    background: #800020;
+    padding-left: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+header img {
+  width: auto;
+  height: 60px;
+}
+
+#search {
+  padding-left: 240px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#search input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 90%;
+}
+
+#search button {
+  padding: 11px 12px;
+  border-radius: 2px;
+  background-color: #e9ebee;
+  vertical-align: middle;
+}
+
+
+#search img {
+  width: 16px;
+  height: 16px;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
 }
 
 li {
@@ -41,9 +79,10 @@ li button {
 
 #category p {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 1px #c1c1c1 solid;
   padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 #display {
@@ -86,6 +125,7 @@ li button {
 }
 
 #title p {
+  margin: 2px;
   font-size: 13px;
   font-weight: bold;
   width:180px;
@@ -95,6 +135,7 @@ li button {
 }
 
 #date p {
+  margin: 2px;
   color: #a9a9a9;
   font-size: 13px;
   width:180px;
@@ -104,10 +145,22 @@ li button {
 }
 
 #location p {
+  margin-top: 2px;
+  margin-bottom: 10px;
   color: #a9a9a9;
   font-size: 13px;
   width:180px;
   white-space: nowrap;
   overflow:hidden !important;
   text-overflow: ellipsis;
+}
+
+footer {
+    background: #800020;
+    color: #fff;
+    padding: 1px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
 }
