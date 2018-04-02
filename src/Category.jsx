@@ -2,8 +2,8 @@ import React from 'react';
 import Display from './Display';
 import Header from './Header';
 import Footer from './Footer';
-// import fetcher from './api/fetcher';
-import data from './api/sample-data';
+import axios from 'axios';
+import data from './data/sample-data';
 
 class Category extends React.Component {
   constructor() {
@@ -19,8 +19,7 @@ class Category extends React.Component {
   }
 
   componentDidMount() {
-  // fetcher.fetchByCategory(this.state.category, result =>
-    // console.log('RESULT CATEGORY FROM CRAILIST', result));
+
   }
 
   selectCat(e) {
@@ -28,8 +27,7 @@ class Category extends React.Component {
   }
 
   handleClick() {
-    // fetcher.fetchBySearch(this.state.search, result =>
-      // console.log('RESULT SEARCH FROM CRAILIST', result));
+
   }
 
   handleSearch(e) {
