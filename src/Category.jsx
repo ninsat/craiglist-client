@@ -1,5 +1,7 @@
 import React from 'react';
 import Display from './Display';
+import Header from './Header';
+import Footer from './Footer';
 // import fetcher from './api/fetcher';
 import data from './api/sample-data';
 
@@ -37,6 +39,9 @@ class Category extends React.Component {
   render() {
     return (
       <div>
+        <div>
+          <Header />
+        </div>
         <div id="search">
           <input placeholder='Search "couch"' value={this.state.search} onChange={this.handleSearch} />
           <button onClick={this.handleClick}><img src="https://image.flaticon.com/icons/svg/34/34097.svg" alt="icon" /></button>
@@ -200,6 +205,9 @@ class Category extends React.Component {
         </div>
         <div id="display">
           {this.state.listing.map(x => <Display listOfItem={x} key={x.pid} />)}
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     );
