@@ -1,9 +1,24 @@
 const express = require('express');
-const path = require('path');
+const bodyParser = require('body-parser');
+const craigslist = require('./craigslist/fetcher.js');
 
 const app = express();
 const port = 3000;
 
 app.use(express.static(`${__dirname}/../dist/`));
+app.use(bodyParser.json());
+
+// app.get('/', (req, res) => {
+// });
 
 app.listen(port, () => console.log(`CraigsMarket listening on port ${port}!`));
+
+
+// craigslist.fetchBySearch('cta', result =>
+//   console.log('data', result));
+
+// craigslist.fetchByCategory('iphone', result =>
+//   console.log('data', result));
+
+craigslist.fetchDetails('cta', result =>
+  console.log('data', result));
