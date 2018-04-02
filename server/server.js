@@ -17,8 +17,8 @@ app.listen(port, () => console.log(`CraigsMarket listening on port ${port}!`));
 // craigslist.fetchBySearch('cta', result =>
 //   console.log('data', result));
 
-// craigslist.fetchByCategory('iphone', result =>
+// craigslist.fetchByCategory('toyota', result =>
 //   console.log('data', result));
 
-craigslist.fetchDetails('cta', result =>
+craigslist.fetchDetails('mca', result =>
   console.log('data', result));
