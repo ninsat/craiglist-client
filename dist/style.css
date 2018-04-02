@@ -1,15 +1,6 @@
 body {
-  font-family: arial;
+  font-family: verdana;
   background-color: #e9ebee;
-}
-
-#app {
-  border: 3px red solid;
-}
-
-.main {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 ul {
@@ -27,30 +18,56 @@ li:hover {
   border-radius: 2px;
 }
 
-button {
+li button {
   border: 0px;
   background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
 }
 
 #category {
-  border: 3px blue solid;
+  float: left;
+  width: 19%;
+}
+
+#category img {
+  height: 25px;
+  width: 25px;
+  background-color: #c1c1c1;
+  border-radius: 50px;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+#category p {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px #c1c1c1 solid;
+  padding-bottom: 10px;
 }
 
 #display {
   background-color: #fff;
-  border: 3px green solid;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 80%;
 }
 
 #item {
-  border: 1px #e9ebee solid;
+  border: 2px #e9ebee solid;
   border-radius: 3px;
   width: 190px;
   height: auto;
   margin: 5px;
   position: relative;
+}
+
+#item img {
+  max-width:190px;
+  max-height:180px;
+  width: auto;
+  height: auto;
 }
 
 #price p {
@@ -68,9 +85,29 @@ button {
   font-size: 14px;
 }
 
-img {
-  max-width:190px;
-  max-height:180px;
-  width: auto;
-  height: auto;
+#title p {
+  font-size: 13px;
+  font-weight: bold;
+  width:180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+#date p {
+  color: #a9a9a9;
+  font-size: 13px;
+  width:180px;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+#location p {
+  color: #a9a9a9;
+  font-size: 13px;
+  width:180px;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
 }

@@ -10,13 +10,13 @@ const Display = ({ listOfItem }) => (
     <div id="price">
       <p>{listOfItem.price}</p>
     </div>
-    <div>
+    <div id="title">
       <p>{listOfItem.title}</p>
     </div>
-    <div>
-      <p>{listOfItem.date}</p>
+    <div id="date">
+      <p>posted on {listOfItem.date.slice(0, 10)}</p>
     </div>
-    <div>
+    <div id="location">
       <p>{listOfItem.location}</p>
     </div>
   </div>
