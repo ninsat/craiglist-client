@@ -17,7 +17,7 @@ const Display = ({ listOfItem }) => (
       <p>posted on {listOfItem.date.slice(0, 10)}</p>
     </div>
     <div id="location">
-      <p>{listOfItem.location}</p>
+      <p>{listOfItem.location.replace(/[{()}]/g, '')}</p>
     </div>
   </div>
 );
