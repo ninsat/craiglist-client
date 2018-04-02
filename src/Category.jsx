@@ -1,31 +1,44 @@
 import React from 'react';
 import Display from './Display';
-// import fetch from './api/fetcher';
+// import fetcher from './api/fetcher';
 import data from './api/sample-data';
 
 class Category extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       category: 'sss',
-      listing: data
+      listing: data, // to be removed
+      search: undefined,
     };
     this.selectCat = this.selectCat.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
-  // fetch(this.state.category, result => console.log('RESULT FROM CRAILIST', result));
+  // fetcher.fetchByCategory(this.state.category, result =>
+    // console.log('RESULT CATEGORY FROM CRAILIST', result));
   }
 
   selectCat(e) {
     this.setState({ category: e.target.id });
   }
 
+  handleClick() {
+    // fetcher.fetchBySearch(this.state.search, result =>
+      // console.log('RESULT SEARCH FROM CRAILIST', result));
+  }
+
+  handleSearch(e) {
+    this.setState({ search: e.target.value });
+  }
+
   render() {
     return (
       <div>
         <div id="search">
-          <input placeholder='Search "couch"' value={this.state.quantity} onChange={this.handleChangeQuantity} />
+          <input placeholder='Search "couch"' value={this.state.search} onChange={this.handleSearch} />
           <button onClick={this.handleClick}><img src="https://image.flaticon.com/icons/svg/34/34097.svg" alt="icon" /></button>
         </div>
         <div id="category">

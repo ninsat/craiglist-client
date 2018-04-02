@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background: #800020;
+    background: #4169E1;
     padding-left: 50px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -156,7 +156,7 @@ li button {
 }
 
 footer {
-    background: #800020;
+    background: #4169E1;
     color: #fff;
     padding: 1px;
     font-weight: bold;
