@@ -1,58 +1,32 @@
 const craigslist = require('node-craigslist');
 
 // fetch craigslist data by category
-const fetchByCategory = (categoryCode, cb) => {
+const fetchByCategory = (categoryCode) => {
   const client = new craigslist.Client({
     city: 'sfbay',
   });
   const options = {
     category: categoryCode,
   };
-
-  client
-    .search(options)
-    .then((listings) => {
-      listings.forEach(listing => cb(listing));
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  return client
+    .search(options);
 };
 
 // fetch craigslist data by keyword
-const fetchBySearch = (keyword, cb) => {
+const fetchBySearch = (keyword) => {
   const client = new craigslist.Client({
     city: 'sfbay',
   });
-
-  client
-    .search(keyword)
-    .then((listings) => {
-      listings.forEach(listing => cb(listing));
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  return client
+    .search(keyword);
 };
 
 // fetch craigslist data by category plus details
-const fetchDetails = (categoryCode, cb) => {
+const fetchDetails = ({ url }) => {
   const client = new craigslist.Client({
     city: 'sfbay',
   });
-  const options = {
-    category: categoryCode,
-  };
-
-  client
-    .search(options)
-    .then(listings => client.details(listings[0]))
-    .then((details) => {
-      cb(details);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  return client.details(url);
 };
 
 module.exports.fetchByCategory = fetchByCategory;
