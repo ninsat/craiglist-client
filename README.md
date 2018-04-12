@@ -15,5 +15,5 @@ CraigsMarket makes Craigslist prettier and easier to use.
 ### Server
 - Server listening on :octocat: http://localhost:3000
 
-![Alt text](https://i.imgur.com/GnvbH27.png "Optional title")
+![Alt text](https://i.imgur.com/GnvbH27.png "CraigsMarket")
 ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
